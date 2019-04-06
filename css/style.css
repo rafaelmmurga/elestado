@@ -117,7 +117,8 @@ a {
 }
 
 .imganuncio{
-    max-height: 15rem;
+    /*max-height: 15rem;*/
+    margin-bottom: 10px;
 }
 
 /** Nosotros **/
