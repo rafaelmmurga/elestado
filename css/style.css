@@ -1,5 +1,5 @@
 :root {
-    --primario: #388E3C;
+    --primario: #000312;
     --secundario: #ffc845;
     --negro: #000000;
     --claro: #ffffff;
@@ -87,7 +87,7 @@ h2 {
 
 nav {
   display: flex;
-  height: 70px; /* non-essential; for demo only */
+  height: 80px; /* non-essential; for demo only */
 }
 
 /* non-essential; for demo only */
@@ -147,7 +147,7 @@ a {
 /* Venta */
 .venta {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1fr);
     grid-template-rows: repeat(3, auto);
     grid-gap: 1rem;
     padding: 10px 15px;
@@ -172,7 +172,9 @@ a {
 
 
 
-@media (min-width:768px) {
+
+
+@media (min-width:700px) {
     .venta {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, auto);
@@ -348,7 +350,7 @@ main > section {
         opacity: 0.7;
          }
 
-.anuncio .card .titulo {
+.anuncio .card2 .titulo {
     text-transform: uppercase;
     font-size: 21.6px;
     color: var(--negro);
@@ -364,10 +366,22 @@ main > section {
     grid-gap: 2rem;
     padding-left: 1rem;
 }
-@media (min-width:768px) {
+@media (min-width:700px) {
     .principal2 {
         display: grid;
         grid-template-columns: 2fr 1fr;
         grid-column-gap: 2rem;
+    }
+    .principal2 .card2 .info .titulo0 {
+        font-size: 12px;
+        color: var(--claro);
+        font-family: 'Lora', sans-serif;
+        margin-bottom: 10px;
+    }
+    .principal2 .card2 .info .titulo {
+        font-size: 8px;
+        color: var(--claro);
+        font-family: 'Lora', sans-serif;
+        margin-bottom: 5px;
     }
 }
