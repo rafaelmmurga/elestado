@@ -106,7 +106,7 @@ nav {
    
     text-align: center;
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 70% 30%;
     grid-gap: 2rem;
     text-align: left;
     padding-left: 1rem;
