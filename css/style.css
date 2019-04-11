@@ -8,6 +8,7 @@
     --oscuro: #57a42b;
     --padding: .5rem;
     --paddingt: 2rem;
+    --azul: #14318a;
 }
 
 .logo{
@@ -53,7 +54,7 @@ a{
 .header {
     margin-top: 0rem;
     padding: var(--padding);
-    background: var(--negro);
+    background: linear-gradient(to right, var(--azul), var(--negro));
 }
 .header .contenedor{
     display: grid;
