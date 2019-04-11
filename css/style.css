@@ -54,7 +54,7 @@ a{
 .header {
     margin-top: 0rem;
     padding: var(--padding);
-    background: linear-gradient(to right, var(--azul), var(--negro));
+    background: linear-gradient(to right, var(--negro), var(--azul));
 }
 .header .contenedor{
     display: grid;
