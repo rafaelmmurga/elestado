@@ -418,8 +418,8 @@ and (orientation : landscape){
 
 .banner{
     margin-top: 5.5rem;
-    display: grid;
-    justify-content: center;
+     display: flex;
+    justify-content:space-around; 
 }
 
 .container{
