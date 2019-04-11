@@ -55,6 +55,7 @@ a{
     margin-top: 0rem;
     padding: var(--padding);
     background: linear-gradient(to right, var(--negro), var(--azul));
+    z-index: 999999;
 }
 .header .contenedor{
     display: grid;
@@ -526,5 +527,6 @@ and (orientation : landscape){
 .fb-page, 
 .fb-page span, 
 .fb-page span iframe[style] { 
-    width: 100% !important; 
+    /*width: 100% !important;*/ 
 }
+
