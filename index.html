@@ -47,9 +47,150 @@
     </script>
     
 
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <style type="text/css">
+*{
+  margin:0;
+  padding:0;
+}
+body{
+  background: #eee;
+}
+.fullpage,.mainContainer{}
+.fullpage{
+  width:100%;
+  position:relative;
+  margin:0;
+  height:100%;
+  padding:0;
+  
+}
+.mainContainer{
+  max-width:90%;
+  margin:0 auto;
+}
+
+.fibonacci_upper{
+  display:inline-block;
+  width:100%;
+  float:left;
+  background:#fff''
+}
+.fibonacci_con{
+  max-width:100%;
+  margin:0 auto;
+  width:100%;
+  padding:3% 1%;
+
+}
+h2{
+  color:#333;
+  text-align:center;
+  padding:3% 2%;
+  font-size:16px;
+  margin-bottom:10%;
+  position:relative;
+    @include breakpoint(768px){
+            font-size:20px;
+            }
+  &:after{
+    content:'';
+    width:60%;
+    height:1px;
+    background-color:#ccc;
+    position:absolute;
+    bottom:5%;
+    left:0;
+    right:0;
+    text-align:center;
+    margin:0 auto;
+  }
+}
+.imageSlider{
+  position:relative;
+}
+ul{
+  width:100%;
+  position:relative;
+  height:300px;
+}
+ul li{
+  list-style-type:none;
+}
+
+img{
+  max-width:100%
+}
+li{
+  position:absolute;
+  top:0;
+  left:0;
+  opacity: 0;
+  transition: 1s opacity;
+}
+.show{
+  opacity: 1;
+  transition: 1s opacity;
+}
+
+.next,.prev{
+  position:absolute;
+  cursor:pointer;
+  background:#121212;
+  color:#fff;
+  padding:2%;
+  top:50%;
+  font-size:12px;
+}
+.next{
+  right:0;
+}
+.prev{
+  left:0;
+}
+
+.dots{
+  position:absolute;
+  bottom:5%;
+  left:0;
+  text-align:center;
+  margin:0 auto;
+  width:100%;
+}
+
+span.dot{
+  width:10px;
+  height:10px;
+  position:relative;
+  border-radius:50%;
+  display:inline-block;
+  cursor:pointer;
+}
+
+#pager {
+      position: absolute;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    height: 20px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+  li{
+   position: relative;
+    color: #fff;
+    opacity: 1;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 4%;
+  }
+}
+    </style>
 </head>
 <body>   
    
@@ -67,6 +208,39 @@
         </nav>
     </header>
 
+    <div class="fullpage">
+<div class="mainContainer">
+  <div class="fibonacci_upper">
+  <div class="fibonacci_con">
+   
+  <div class="imageSlider">
+    <ul>
+      
+      <li>
+        <a class="zone2 green" href="noticia.html">
+            <span class="fondo">El gobernador Cuitláhuac García Jiménez afirmó que Veracruz está de acuerdo con la creación de la Guardia Nacional</span>
+        </a>
+    </li>
+      <li> <img src="img/01.jpg" > </li>
+      <li> <img src="img/02.jpg" > </li>      
+    </ul>
+    
+    <div class="next"> Siguiente </div>
+    <div class="prev"> Anterior </div>
+    
+   
+    </div>
+    
+ 
+    
+
+  </div>
+  </div>
+  </div>
+</div>
+
+
+
     <div class="banner">
         <div>
         <img src="img/frase1.jpg" >
@@ -75,7 +249,6 @@
         <img src="img/banner1.gif" >
         </div>
     </div>
-    
 
     <div class="container">
         <a class="zone2 green" href="noticia.html">
@@ -92,8 +265,8 @@
                     <div class="anuncio zone">
                         <img src="img/01.jpg" >
                         <div class="card">
-                            <h3 class="titulo">Titulo de la noticia 1</h3>
-                            <p class="descripcion"> Etiam turpis mauris, sollicitudin nec nunc ut, consequat molestie sapien. Etiam turpis mauris, sollicitudin nec nunc u.</p>
+                            <h3 class="titulo">El gobernador Cuitláhuac García Jiménez afirmó que Veracruz está de acuerdo con la creación de la Guardia Nacional</h3>
+                            <p class="descripcion">Afrimó su aprobación total al presidente Andrés Manuel López Obrador y a los diputados federales de Morena para lograr este objetivo, durante la presentación del programa Sembrando Vida.</p>
 
                             <p class="precio">
                                 <span>02/03/2019</span>
@@ -270,7 +443,47 @@
         <p class="copyright">Derechos Reservados El Estado 2019</p>
     </footer>
 
-     <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.2&appId=2195037477474016&autoLogAppEvents=1"></script>
+    <div id="fb-root"></div>
+
+    <script>
+        
+(function(){
+  
+var counter =0;
+var item = document.querySelectorAll(".imageSlider ul li")
+
+var totalcount = item.length;
+console.log(totalcount);
+  
+function  showActive(){
+    var itemToShow = Math.abs( counter % totalcount);
+   
+    [].forEach.call(item, function(el){
+      el.classList.remove('show');
+    });
+  
+  item[itemToShow].classList.add('show');
+}
+showActive();
+
+  
+  // add click events to prev & next buttons 
+document.querySelector('.next').addEventListener('click', function() {
+     counter++;
+     showActive();
+  }, false);
+
+document.querySelector('.prev').addEventListener('click', function() {
+     counter--;
+     showActive();
+  }, false);
+  
+
+  
+showActive();
+ 
+})();  
+
+    </script>
 </body>
 </html>
