@@ -21,7 +21,7 @@
     <meta property="og:locale" content="es_ES" />
     <meta property="og:site_name" content="Noticias del Estado de Veracruz | EL Estado" />
     <meta property="og:title" content="Noticias del Estado de Veracruz | EL Estado" />
-    <meta property="og:url" content="https://www.el-estado.mx/" />
+    <meta property="og:url" content="https://www.el-estado.com.mx/" />
     <meta property="og:description" content="Noticias del Estado de Veracruz" />
 
     <!--<meta property="fb:app_id" content="9403943162666" />
@@ -208,37 +208,6 @@ span.dot{
         </nav>
     </header>
 
-    <div class="fullpage">
-<div class="mainContainer">
-  <div class="fibonacci_upper">
-  <div class="fibonacci_con">
-   
-  <div class="imageSlider">
-    <ul>
-      
-      <li>
-        <a class="zone2 green" href="noticia.html">
-            <span class="fondo">El gobernador Cuitláhuac García Jiménez afirmó que Veracruz está de acuerdo con la creación de la Guardia Nacional</span>
-        </a>
-    </li>
-      <li> <img src="img/01.jpg" > </li>
-      <li> <img src="img/02.jpg" > </li>      
-    </ul>
-    
-    <div class="next"> Siguiente </div>
-    <div class="prev"> Anterior </div>
-    
-   
-    </div>
-    
- 
-    
-
-  </div>
-  </div>
-  </div>
-</div>
-
 
 
     <div class="banner">
@@ -422,15 +391,14 @@ span.dot{
             </section>
         </div>
         <div>
-          <div class="fb-page" 
-          data-href="https://www.facebook.com/elestadonoticias" 
-          data-small-header="false" 
-          data-adapt-container-width="false" 
-          data-hide-cover="false" 
-          adapt_container_width="false"
-          data-width="300"
-          data-show-facepile="true"
-          ><blockquote cite="https://www.facebook.com/elestadonoticias" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/elestadonoticias">El Estado</a></blockquote></div>
+            <div class="fb-page" data-href="https://www.facebook.com/elestadonoticias" data-width="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/elestadonoticias" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/elestadonoticias">El Estado</a></blockquote></div>
+            <a href="https://twitter.com/ElEstado3?ref_src=twsrc%5Etfw" 
+            class="twitter-follow-button" 
+            data-size="large"
+            data-show-count="false"
+            >Follow @ElEstado3
+            </a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
            <img src="img/anuncio2.jpg" class="imganuncio">
         </div>
     </section>
@@ -444,46 +412,8 @@ span.dot{
     </footer>
 
     <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.2&appId=2195037477474016&autoLogAppEvents=1"></script>
 
-    <script>
-        
-(function(){
-  
-var counter =0;
-var item = document.querySelectorAll(".imageSlider ul li")
-
-var totalcount = item.length;
-console.log(totalcount);
-  
-function  showActive(){
-    var itemToShow = Math.abs( counter % totalcount);
    
-    [].forEach.call(item, function(el){
-      el.classList.remove('show');
-    });
-  
-  item[itemToShow].classList.add('show');
-}
-showActive();
-
-  
-  // add click events to prev & next buttons 
-document.querySelector('.next').addEventListener('click', function() {
-     counter++;
-     showActive();
-  }, false);
-
-document.querySelector('.prev').addEventListener('click', function() {
-     counter--;
-     showActive();
-  }, false);
-  
-
-  
-showActive();
- 
-})();  
-
-    </script>
 </body>
 </html>
